@@ -53,7 +53,7 @@ let productos=[
 
     {
         nombre:"decaffeinated summit coffee",
-        fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasura-80b34.appspot.com/o/Cumbre%20Decafeinado.png?alt=media&token=73affcfc-f0e2-46b2-9fb3-96075e2a4e33",""],
+        fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasura-80b34.appspot.com/o/Descafeinadocumbre2.jpg?alt=media&token=767b8aca-2700-4cae-918f-e6e4c6765462","https://firebasestorage.googleapis.com/v0/b/tiendasura-80b34.appspot.com/o/Cumbre%20Decafeinado.png?alt=media&token=73affcfc-f0e2-46b2-9fb3-96075e2a4e33"],
         precio:27000,
         popularidad:5,
         descripcion:"It is a coffee with character with light sweet notes of semi-dry grapes and a prolonged coffee flavor. Content:454gr",
