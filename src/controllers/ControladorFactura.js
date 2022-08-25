@@ -32,16 +32,16 @@ if(carrito==null){
     carrito.forEach(function(producto){
         
         let fila=document.createElement("div")
-        fila.classList.add("row","my-5", "justify-content-center")
+        fila.classList.add("row","my-5", "justify-content-center", "shadow", "p-3")
 
         let columna1=document.createElement("div")
         columna1.classList.add("col-12", "col-md-5")
 
         let columna2=document.createElement("div")
-        columna2.classList.add("col-12", "col-md-3")
+        columna2.classList.add("col-12", "col-md-3", "border-end","align-self-center")
 
         let columna3=document.createElement("div")
-        columna3.classList.add("col-12", "col-md-3")
+        columna3.classList.add("col-12", "col-md-3", "align-self-center")
 
         let foto=document.createElement("img")
         foto.classList.add("img-fluid","w-100")
@@ -53,27 +53,27 @@ if(carrito==null){
 
         let precio=document.createElement("h4")
         precio.classList.add("text-center", "mt-5")
-        precio.textContent="costo unidad: " +producto.precio
+        precio.textContent="Unit cost: " +producto.precio
         
         
         let cantidad=document.createElement("h4")
         cantidad.classList.add("text-center")
-        cantidad.textContent="cantidad: " +producto.cantidad
+        cantidad.textContent="Quantity: " +producto.cantidad
 
         let descripcion=document.createElement ("h5")
         descripcion.classList.add("text-center")
-        descripcion.textContent="descripcion: " +producto.descripcion
+        descripcion.textContent="Description: " +producto.descripcion
 
         let subtotal=document.createElement("h2")
-        subtotal.classList.add("fw-bold")
-        console.log(producto.precio)
-        console.log(producto.cantidad)
-        console.log(producto.precio*producto.cantidad)
-        let banana=producto.precio.split("$") [1]
-        console.log(banana)
+        subtotal.classList.add("fw-bold", "text-center","bg-dark", "text-white")
+       
+        let subtotalcalculado=producto.precio*producto.cantidad
+        console.log(subtotalcalculado)
+        subtotal.textContent=subtotalcalculado
 
-
-
+        let textosubtotal=document.createElement ("h3")
+        textosubtotal.classList.add("fw-bold", "text-center")
+        textosubtotal.textContent="Subtotal"
 
 
         columna1.appendChild(foto)
@@ -81,6 +81,8 @@ if(carrito==null){
         columna2.appendChild(precio)
         columna2.appendChild(cantidad)
         columna2.appendChild(descripcion)
+        columna3.appendChild(textosubtotal)
+        columna3.appendChild(subtotal)
         fila.appendChild(columna1)
         fila.appendChild(columna2)
         fila.appendChild(columna3)
