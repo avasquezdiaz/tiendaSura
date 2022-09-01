@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delius&family=Just+Another+Hand&family=Kalam&display=swap" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="./assets/styles/estilos.css">
 </head>
 <body class="bg-light">
@@ -33,6 +34,18 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:5500/src/views/tienda.html">Products</a>
+                  </li>  
+
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a id="botonsalir" class="nav-link active"aria-current="page" href="">salir</a>
+                    <i class="bi bi-box-arrow-left"></i>
+                  </li>
+
+                  <li class="nav-item">
+                    <a id="usuario" class="nav-link active"aria-current="page" href="">usuario</a>
+                  
                   </li>
                 </ul>
                 
@@ -78,7 +91,7 @@
           </div>
           <div class="offcanvas-body">
             <div>
-              <form action="">
+              <form action="" id="formulario">
                 <div class="mb-3">
                   <label class="form-label">Email address</label>
                   <input type="email" class="form-control" id="correo">                  
@@ -211,6 +224,8 @@
     
     <script src="./src/services/conexionFireBse.js" type="module"></script>
     <script src="./src/services/registro.js" type="module"></script>
+    <script src="./src/services/observadorEstado.js" type="module"></script>
+    <script src="./src/services/logout.js" type="module"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
