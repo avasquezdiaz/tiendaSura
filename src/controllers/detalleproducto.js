@@ -47,16 +47,15 @@ console.log (pildora.textContent)
 
 
 //agregramos el producto al carrito de compras
-
-
     carrito.push(producto)
     console.log(carrito)
-
 
 //agregando el carrito a la memoria
     localStorage.setItem("carrito",JSON.stringify(carrito))
     let cantidadCarrito=carrito.length
     pildora.textContent=cantidadCarrito
+
+   
 
 
 

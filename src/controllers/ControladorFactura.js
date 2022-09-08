@@ -1,6 +1,8 @@
 let carrito=JSON.parse(localStorage.getItem ("carrito"))
 let totalcompra=document.getElementById("totalcompra")
 
+total=0
+
 //
 let factura=document.getElementById("factura")
 
@@ -30,7 +32,8 @@ if(carrito==null){
 
 
 
-}else{
+}
+else{
     //recorro carrito
     carrito.forEach(function(producto){
         
@@ -78,6 +81,14 @@ if(carrito==null){
         textosubtotal.classList.add("fw-bold", "text-center")
         textosubtotal.textContent="Subtotal"
 
+
+
+        total=total+subtotalcalculado
+
+        let textototalcompra=document.createElement ("h2")
+        textototalcompra.classList.add("fw-bold", "text-center")
+        textototalcompra.textContent="Total Compra"
+
         
 
         let botonlimpiar=document.getElementById("botonlimpiar")
@@ -91,12 +102,11 @@ if(carrito==null){
             window.location.href="./resumenCompra.html"
 
             //poner el total en cero
-            totalcompra.textContent="Total:$0"
+            totalcompra.textContent="Total:$ +totalcompra"
+                 
 
         })
-
-
-       
+     
 
 
         columna1.appendChild(foto)
@@ -113,6 +123,9 @@ if(carrito==null){
         
 
     })
+
+    
+    totalcompra.textContent=total
 
     
 
