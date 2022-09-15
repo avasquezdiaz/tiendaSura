@@ -1,7 +1,8 @@
 let carrito=JSON.parse(localStorage.getItem ("carrito"))
 let totalcompra=document.getElementById("totalcompra")
-
 total=0
+let moneda=0
+let bandera=0
 
 //
 let factura=document.getElementById("factura")
@@ -127,6 +128,23 @@ else{
     
     totalcompra.textContent=total
 
+    //pintar la conversion
+    totalusd.textContent="USD: $" +moneda
+    let btncalculo=document.getElementById("btncalculo")
+    btncalculo.addEventListener("click",function(evento){
+        totalusd.textContent=moneda
+        if (bandera==true){
+            btncalculo.addEventListener("click",function(evento){
+            totalusd.textContent="total cost: $" +totalcompra
     
+        })
+        Bandera=!bandera
+        }else{
+            btncalculo.addEventListener("click", function(evento){
+            totalusd.textContent="USD :$" +moneda
+            })
+            bandera=!bandera
+    }
+})
 
 }
