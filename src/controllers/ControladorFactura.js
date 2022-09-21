@@ -1,10 +1,8 @@
 let carrito=JSON.parse(localStorage.getItem ("carrito"))
 let totalcompra=document.getElementById("totalcompra")
-total=0
-let moneda=0
-let bandera=0
-
-//
+let TotalCompraUsd=document.getElementById("TotalCompraUsd")
+let total=0
+let total2=0
 let factura=document.getElementById("factura")
 
 //compruebo el estado del carrito
@@ -84,7 +82,9 @@ else{
 
 
 
+
         total=total+subtotalcalculado
+        total2=total2+subtotalcalculado
 
         let textototalcompra=document.createElement ("h2")
         textototalcompra.classList.add("fw-bold", "text-center")
@@ -128,23 +128,15 @@ else{
     
     totalcompra.textContent=total
 
-    //pintar la conversion
-    totalusd.textContent="USD: $" +moneda
-    let btncalculo=document.getElementById("btncalculo")
-    btncalculo.addEventListener("click",function(evento){
-        totalusd.textContent=moneda
-        if (bandera==true){
-            btncalculo.addEventListener("click",function(evento){
-            totalusd.textContent="total cost: $" +totalcompra
-    
+
+        let dollar=document.getElementById("dollar")
+        dollar.addEventListener("click",function(evento){
+            TotalCompraUsd.textContent=Math.round(total2/4500)
         })
-        Bandera=!bandera
-        }else{
-            btncalculo.addEventListener("click", function(evento){
-            totalusd.textContent="USD :$" +moneda
-            })
-            bandera=!bandera
-    }
-})
+
+
+
+    
+
 
 }
